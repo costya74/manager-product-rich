@@ -16,4 +16,9 @@ private String marker;
         super(id, name, price);
         this.marker = marker;
     }
+    @Override
+    public boolean matches(String search) {
+       return super.matches(search) || marker.equals(search);
+    }
+
 }
